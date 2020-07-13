@@ -4,7 +4,8 @@ application = Flask(__name__)
 
 @application.route("/")
 def hello():
-    return "os.environ[\"USER\"] - Hello World!"
+    usuario = os.environ["USER"]
+    return usuario " - Hello World!"
 
 if __name__ == "__main__":
     application.run()
